@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <!--Script to use fontawesome Icons-->
+        <script src="https://kit.fontawesome.com/e1db25fb05.js" crossorigin="anonymous"></script>
+        <!--Css file-->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <a href="/new-project">Create Project</a>       
+           <div class="project-list-container">
+               <ul>
+                   <% for(p of project_list ) { %>
+                    <li class="project-list">
+                        <div class="project-name">
+                            <%= p.name %>
+                        </div>
+                        <div class="project-author">
+                            <%= p.author %>
+                        </div>                                                
+                    </li>
+                   <% } %>
+               </ul>
+            </div>
+    </body>
+</html>

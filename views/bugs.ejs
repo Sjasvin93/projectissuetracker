@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <!--Script to use fontawesome Icons-->
+        <script src="https://kit.fontawesome.com/e1db25fb05.js" crossorigin="anonymous"></script>
+        <!--Css file-->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+            <div class="display-bugs">                       
+                <h1>Bugs list</h1>
+                <div class="bug-details-container">
+                    <div class="bug-list-heading">            
+                        <p class="heading_bug_title">BUG TITLE</p>
+                        <p class="heading_bug_label">BUG LABEL</p>
+                        <p class="heading_bug_author">BUG AUTHOR</p>
+                    </div>    
+                    <ul class="bug-list-main-container">
+                        <% for(b of bug_list) { %>
+                            <li class="bug_list_container">            
+                                <div class="bug-list-title">
+                                    <%= b.title %>
+                                </div>
+                                <div class="bug-list-label">
+                                    <%= b.label %>
+                                </div>
+                                <div class="bug-list-author">
+                                    <%= b.author %>
+                                </div>
+                                <div class="project-bug-btn">
+                                    <a id="project-details-btn" href="/projects/bug-details/<%= b._id %>">Bug Details</a>       
+                                </div> 
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>              
+        </div>        
+    </body>
+</html>

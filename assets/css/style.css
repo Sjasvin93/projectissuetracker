@@ -1,0 +1,427 @@
+body{
+    margin: 0px;
+    background-color: rgb(247, 231, 185);
+}
+
+.top-continer{
+    display: inline-block;
+    justify-content: space-between;
+}
+
+#create-project-btn{
+    margin-left: 85%;
+    background-color: #050505;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+
+#create-project-btn:hover, #create-project-btn:active{
+    background-color: #6e6b6b;
+}
+
+.project_list_heading{
+    margin-left: 140px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: large;
+}
+
+.top-heading{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 40px;
+    width: 200px;
+    color: #6e6b6b;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+}
+
+.heading_project_name{
+    color: aliceblue;
+    padding-bottom: 15px;
+    margin-left: 25px;
+}
+
+.heading_project_author{
+    color: aliceblue;
+    padding-bottom: 15px;
+    margin-right: 50%;
+}
+
+.project-list-container{
+    width: 80%;
+    overflow-y: scroll;
+    margin-left: 10%;
+    height: 65%;
+}
+
+.project-author, .project-name{
+    width: 200px;
+    text-transform: uppercase;
+}
+
+.project-list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+
+
+
+#project-details-btn{
+    background-color: #0d0f0e;
+    color: rgb(245, 239, 239);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(12, 12, 12); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #585757; 
+  }
+
+#project-details-btn:hover, #project-details-btn:active{
+    background-color: #6e6b6b;
+}
+/* ------------------------------------------------------------------ */
+
+#create-form-container{
+    padding-top: 5%;
+    margin-left: 32%;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+}
+
+.input-name{
+    margin-bottom: 10px;
+    height: 10%;
+    width: 50%;
+    border: none;
+}
+
+.input-description{
+    margin-bottom: 10px;
+    height: 25%;
+    width: 50%;
+    border: none;    
+}
+
+.input-author{
+    margin-bottom: 10px;
+    height: 10%;
+    width: 50%;
+    border: none;
+}
+
+#create-project-button{
+    background-color: #050505;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-left: 33%;
+}
+
+#create-project-button:hover, #create-project-button:active{
+    background-color: #6e6b6b;
+    cursor: pointer;
+}
+
+/* --------------------------------------------- */
+
+
+.bug-container{
+    margin-left: 32%;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.bug-title{
+    margin-bottom: 10px;
+    height: 10%;
+    width: 50%;
+    border: none;
+}
+
+.bug-description{
+    margin-bottom: 10px;
+    height: 25%;
+    width: 50%;
+    border: none;
+}
+
+.bug-label{
+    margin-bottom: 10px;
+    height: 10%;
+    width: 50%;
+    border: none;
+}
+
+.bug-author{
+    margin-bottom: 10px;
+    height: 10%;
+    width: 50%;
+    border: none;
+}
+
+#submit-bug-button{
+    background-color: #050505;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-left: 33%;
+}
+
+#submit-bug-button:hover, #submit-bug-button:active{
+    background-color: #6e6b6b;
+    cursor: pointer;
+}
+
+/* ---------------------------------- */
+
+.side-nav-bar{
+  height: 87%;
+  width: 250px;
+  position: fixed;
+  left: 0;
+  overflow-y: scroll;
+  border-right: #050505 solid 1px;
+  margin-top: 40px;
+}
+
+#side-nav-project-label{
+    background-color: #050505;
+    height: 25px;
+    width: 100%;
+    color: antiquewhite;
+}
+
+#side-nav-project-label p{
+    padding-top: 3px;
+    margin-left: 5px;
+}
+
+.project-labels-container, .select-author-container {
+    padding-top: 5px;
+    margin-left: 5px;
+}
+
+#detail_submit_btn{
+    background-color: #050505;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left: 70%;
+}
+
+.right-container{
+  margin-left: 270px;
+  padding-top: 50px;
+}
+
+.display-bugs{
+    padding-bottom: 50px;
+}
+
+.project-details-container{
+    height: 350px;
+}
+
+.right-container #project_name{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.div-project-name{
+    background-color: #d8c5c5;
+    border-radius: 20px;
+    padding: 5px;
+    width: 10%;
+}
+
+.div-project-description{
+    background-color: #d8c5c5;
+    border-radius: 20px;
+    padding: 5px;
+    width: 95%;
+    height: 20%;
+    overflow-y: scroll;
+}
+
+.div-project-author{
+    background-color: #d8c5c5;
+    border-radius: 20px;
+    padding: 5px;
+    width: 10%;  
+}
+
+#report-bug-btn{
+    background-color: #050505;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left: 85%;
+}
+
+#report-bug-btn:hover, #report-bug-btn:active{
+    background-color: #6e6b6b;
+}
+
+.bug-details-container{
+    margin-right: 5px;
+}
+.bug-list-heading{
+    display: flex;
+    background-color: black;
+    height: 40px;
+    color: #6e6b6b;
+    width: 100%;
+    text-align: center;
+}
+
+.bug-list-main-container{
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.bug_list_container{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.heading_bug_title{
+    color: aliceblue;
+    padding-bottom: 15px;
+    margin-left: 25px;
+}
+
+.heading_bug_label{
+    color: aliceblue;
+    padding-bottom: 15px;
+    margin-left: 22%;
+}
+
+.heading_bug_author{
+    color: aliceblue;
+    padding-bottom: 15px;
+    margin-left: 24%;
+}
+
+.bug-list-title{
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.bug-list-label{
+    text-transform: uppercase;
+    width: 200px;
+    margin-left: 10%;
+}
+
+.bug-list-author{
+    text-transform: uppercase;
+    width: 200px;
+    margin-left: 15%;
+}
+
+#project-details-btn{
+    background-color: #0d0f0e;
+    color: rgb(245, 239, 239);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;    
+}
+
+.select-title-description {
+    margin-left: 5px;
+}
+
+.select-title-description p{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#input_search_author, #input_search_descp{
+    border: none;
+    width: 90%;
+    height: 30px;
+}
+
+#detail_submit_btn{
+    margin-top: 5px;
+}
+
+/* --------------------------------- */
+
+.project-bug-details-container{
+    padding-top: 50px;
+    margin-left: 100px;
+}
+
+.bug-details-container #bug_heading{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#bug_title, #bug_label, #bug_author, #bug_description{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.div-bug-title,.div-bug-label,.div-bug-description, .div-bug-author{ 
+    background-color: #9e9999;
+    padding: 5px;
+    border-radius: 20px;
+    width: 25%;
+}
+
+.div-bug-description{
+    height: 15%;
+    width: 70%;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
