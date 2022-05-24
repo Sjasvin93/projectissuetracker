@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <!--Script to use fontawesome Icons-->
+        <script src="https://kit.fontawesome.com/e1db25fb05.js" crossorigin="anonymous"></script>
+        <!--Css file-->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="side-nav-bar">
+            <form action="/project-bug-action" method="POST" class="project-details-form">
+                <div id="side-nav-project-label">
+                    <p>PROJECT LABELS</p>
+                </div>
+                <div class="project-labels-container">
+                        <% for(p of bug_list ) { %>
+                                <div class="label-name">
+                                    <input type="checkbox" id="label-list" name="bugLabelList" value="<%= p._id %>">
+                                    <label for="label-list"><%= p.label %></label> 
+                                </div>
+                        <% } %>
+                    <button value="labelsearch" name="bugSearch" id="detail_submit_btn">SEARCH</button>
+                    <!-- <input type="submit" value="labelsearch" name="bugSearch" id="detail_submit_btn">                 -->
+                </div>
+                <div id="side-nav-project-label">
+                    <p>PROJECT AUTHORS</p>
+                </div>
+                <div class="select-author-container">
+                    <div class="author-list">
+                        <% for(p of bug_list ) { %>
+                            <div class="author-name">
+                                <input type="radio" id="author-name-input" name="authorName" value="<%= p.author %>">
+                                <label for="author-name-input"><%= p.author %></label>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div>
+                        <button value="authsearch" name="bugSearch" id="detail_submit_btn">SEARCH</button>
+                        <!-- <input type="submit" value="authsearch" name="bugSearch" id="detail_submit_btn">     -->
+                    </div>                    
+                </div>
+                <div class="select-title-description">
+                    <p>ENTER AUTHOR</p>
+                    <div class="search-author">
+                        <input type="text" placeholder="Enter the author name" name="author" id="input_search_author">
+                    </div>
+                    <p>ENTER DESCRIPTION</p>
+                    <div class="search-description">
+                        <input type="text" placeholder="Enter the Description" name="description" id="input_search_descp">
+                    </div>
+                    <div>
+                        <!-- <input type="submit" value="authdespsearch" name="bugSearch" id="detail_submit_btn"> -->
+                        <button value="authdespsearch" name="bugSearch" id="detail_submit_btn">SEARCH</button>    
+                    </div>     
+                </div>
+            </form>            
+        </div>
+
+        <div class="right-container">
+            <h1 id="project_name">PROJECT DETAILS</h1>
+            <div class="project-details-container">
+                <h3 id="name">NAME:</h3>
+                <div class="div-project-name">
+                    <%= Project_details.name %>
+                </div>
+                <h3 id="description">DESCRIPTION:</h3>
+                <div class="div-project-description">
+                    <%= Project_details.description %>
+                </div>
+                <h3 id="author">AUTHOR:</h3>
+                <div class="div-project-author">
+                    <%= Project_details.author %>
+                </div>
+                <a href="/projects/report-project-bug/<%= Project_details._id %>" id="report-bug-btn">Report Bug</a>
+            </div>
+            <div class="display-bugs">                       
+                <h1>Bugs list</h1>
+                <div class="bug-details-container">
+                    <div class="bug-list-heading">            
+                        <p class="heading_bug_title">BUG TITLE</p>
+                        <p class="heading_bug_label">BUG LABEL</p>
+                        <p class="heading_bug_author">BUG AUTHOR</p>
+                    </div>    
+                    <ul class="bug-list-main-container">
+                        <% for(b of bug_list) { %>
+                            <li class="bug_list_container">            
+                                <div class="bug-list-title">
+                                    <%= b.title %>
+                                </div>
+                                <div class="bug-list-label">
+                                    <%= b.label %>
+                                </div>
+                                <div class="bug-list-author">
+                                    <%= b.author %>
+                                </div>
+                                <div class="project-bug-btn">
+                                    <a id="project-details-btn" href="/projects/bug-details/<%= b._id %>">Bug Details</a>       
+                                </div> 
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>              
+        </div>        
+    </body>
+</html>

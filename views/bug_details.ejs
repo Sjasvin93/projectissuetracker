@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <!--Script to use fontawesome Icons-->
+        <script src="https://kit.fontawesome.com/e1db25fb05.js" crossorigin="anonymous"></script>
+        <!--Css file-->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+            <div class="project-bug-details-container">
+                <h1 id="bug_heading">BUG DETAILS</h1>
+                <h3 id="bug_title">BUG TITLE:</h3>
+                <div class="div-bug-title">
+                    <%= bug_details.title %>
+                </div>
+                <h3 id="bug_label">LABEL:</h3>
+                <div class="div-bug-label">
+                    <%= bug_details.label %>
+                </div>
+                <h3 id="bug_description">DESCRIPTION:</h3>
+                <div class="div-bug-description">
+                    <%= bug_details.description %>
+                </div>
+                <h3 id="bug_author">AUTHOR:</h3>
+                <div class="div-bug-author">
+                    <%= bug_details.author %>
+                </div>
+            </div>    
+    </body>
+</html>

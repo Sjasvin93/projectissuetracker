@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <!--Script to use fontawesome Icons-->
+        <script src="https://kit.fontawesome.com/e1db25fb05.js" crossorigin="anonymous"></script>
+        <!--Css file-->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div id="create-form-container">
+            <h2 class="new_project_heading">CREATE NEW PROJECT</h2>
+            <form action="/projects-data/create-new-project" method="post">
+                <!-- <div > -->
+                    <input type="text" placeholder="Enter the Project name" name="name" class="input-name" required>
+                <!-- </div> -->
+                    <br>
+                <!-- <div > -->
+                    <input type="text" placeholder="Description..." name="description" class="input-description" required>
+                <!-- </div> -->
+                <!-- <div > -->
+                    <br>
+                    <input type="text" placeholder="Enter the Author name" name="author" class="input-author" required>
+                <!-- </div> -->
+                    <br>
+                <input type="submit" value="submit" id="create-project-button">
+            </form>
+        </div>        
+    </body>
+</html>
