@@ -23,6 +23,7 @@ const projectList = require('./models/project.js');
 
 //accessing the create Issue schema file
 const createIssue = require('./models/create_issue');
+const { type } = require('express/lib/response');
 
 app.use(expressLayouts);
 
@@ -108,17 +109,36 @@ app.post('/bug/create-project-bug', function(req,res){
 });
 
 app.post('/project-bug-action', async function(req,res){
-    const value = req.body.bugSearch;
-    // const labelValue = req.body.bugLabelList;
-    // const authorValue = req.body.authorName;
-    // const inputAutValue = req.body.author;
-    // const despValue = req.body.description;
-
+    const value = req.body.bugSearch;  
     if(value == "labelsearch"){
-        
+        var id = [];
+        var results = [];
+        id = req.body.bugLabelList;
+        console.log("length= ",typeof(id));
+        if(typeof(id) != "string"){
+            for(var i = 0; i < id.length; i++){
+                let arr =await createIssue.find({label: id[i]});
+                for(let issue of arr){
+                    results.push(issue);
+                }
+            }            
+        }else{
+            let arr =await createIssue.find({label: id});
+            console.log(arr);
+            for(let issue of arr){
+                results.push(issue);
+            }
+        }
+        console.log(results);
+        return res.render('bugs',
+            {
+              title : "Bug Details",
+              bug_list : results
+            }
+        );                
     }else if(value == "authsearch"){
         const authorValue = req.body.authorName;
-        const results=  await createIssue.find({author: req.body.authorName});
+        const results=  await createIssue.find({author: authorValue});
         return res.render('bugs',
             {
               title : "Bug Details",
@@ -126,6 +146,19 @@ app.post('/project-bug-action', async function(req,res){
             }
         );
     }else{
-
+        const inputAutValue = req.body.author;
+        const despValue = req.body.description;
+        const results=  await createIssue.find({author: inputAutValue, description: despValue});
+        if(results){
+            return res.render('bugs',
+                {
+                title : "Bug Details",
+                bug_list : results
+                }
+            );
+        }else{
+            
+        }
+        
     }
 });

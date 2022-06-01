@@ -17,7 +17,7 @@
                 <div class="project-labels-container">
                         <% for(p of bug_list ) { %>
                                 <div class="label-name">
-                                    <input type="checkbox" id="label-list" name="bugLabelList" value="<%= p._id %>">
+                                    <input type="checkbox" id="label-list" name="bugLabelList" value="<%= p.label %>">
                                     <label for="label-list"><%= p.label %></label> 
                                 </div>
                         <% } %>
